@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { currencies } from "./currencies";
+import Header1 from "./Header1";
+import Container from "./Container";
+import Form from "./Form";
+import Footer from "./Footer";
+import { Clock } from "./Clock";
 
 function App() {
+  const [result, setResult] = useState();
+
+  const calculateResult = (currency, amount) => {
+    const rate = currencies.find(({ short }) => short === currency).rate;
+
+    const resultElement = amount / rate
+
+    setResult(resultElement.toFixed(2));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header1 clock={<Clock />} title = "Kalkulator walut" />
+      <Form calculateResult={calculateResult} result={result} />
+      <Footer author="Adam Wieczorek" />
+    </Container>
   );
 }
 
