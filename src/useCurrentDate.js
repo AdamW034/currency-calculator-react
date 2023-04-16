@@ -16,6 +16,4 @@ export const useCurrentDate = () => {
     return (
         date
     )
-        
-    
 };
