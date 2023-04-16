@@ -1,4 +1,30 @@
-# Getting Started with Create React App
+# ***Currency calculator***
+
+[![zrzut-do-README-kalkulatora.png](https://i.postimg.cc/BnNDyWfY/zrzut-do-README-kalkulatora.png)](https://postimg.cc/682y2m3n)
+
+***
+
+## Few words about the project.
+
+Presented app allows it's user to convert demanded amount of PLN currency units into different chosen currency.
+
+## Used technologies.
+
+The app has been built with following technologies:
+
+* React.js,
+* React Hooks,
+* Styled-Components,
+* ES6,
+* Node.js,
+* Git,
+* CSS,
+* CSS Grid,
+* Normalize CSS.
+
+## [Click here](https://adamw034.github.io/currency-calculator-react/) to try out.
+
+***
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
