@@ -57,3 +57,13 @@ export const FormBody = styled.form`
     display: grid;
     grid-template-rows: 1fr 1fr;
 `;
+
+export const Loading = styled.p`
+    color: goldenrod;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+`;
+
+export const Error = styled.p`
+    color: red;
+`;
