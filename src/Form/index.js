@@ -14,10 +14,10 @@ import {
 import { useRates } from "./useRates";
 
 const Form = () => {
-    const [amount, setAmount] = useState("")
-    const [currency, setCurrency] = useState("USD")
+    const [amount, setAmount] = useState("");;
+    const [currency, setCurrency] = useState("USD");
     const [result, setResult] = useState();
-    const ratesData = useRates()
+    const ratesData = useRates();
 
     const calculateResult = (currency, amount) => {
         const rate = ratesData.rates[currency];
@@ -28,8 +28,8 @@ const Form = () => {
     }
 
     const onFormSubmit = (event) => {
-        event.preventDefault()
-        calculateResult(currency, amount)
+        event.preventDefault();
+        calculateResult(currency, amount);
     };
 
 
@@ -37,7 +37,7 @@ const Form = () => {
         <>
             {ratesData.state === "loading" ? (
                 <Loading>
-                    Ładowanie kursów walut
+                    Ładowanie kursów walut...
                 </Loading>
             )
                 :
@@ -85,9 +85,6 @@ const Form = () => {
                                         />
                                     </Label>
                                 </p>
-                            </Fieldset>
-                            <Fieldset>
-                                <legend>Kalkulacja</legend>
                                 <Paragraph>
                                     <Button>
                                         Przelicz

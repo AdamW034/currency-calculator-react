@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { apiRates } from "./api";
 
 
 export const useRates = () => {
@@ -11,14 +12,13 @@ export const useRates = () => {
 
         const getRates = async () => {
             try {
-                const response = await fetch('https://api.exchangerate.host/latest?base=PLN');
+                const response = await fetch(apiRates);
 
                 if (!response.ok){
                     throw new Error(response.statusText);
                 }
 
                 const {rates, date} = await response.json();
-                
                 
                 setRatesData({
                     state: "success",
@@ -31,8 +31,7 @@ export const useRates = () => {
                 });
             }
         };
-        setTimeout(getRates, 1000);
-        console.log(getRates());
+        setTimeout(getRates, 3000);
     }, []);
 
     return ratesData;

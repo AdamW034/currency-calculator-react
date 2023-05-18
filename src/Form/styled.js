@@ -55,7 +55,7 @@ export const Result = styled.strong`
 
 export const FormBody = styled.form`
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr ;
 `;
 
 export const Loading = styled.p`
